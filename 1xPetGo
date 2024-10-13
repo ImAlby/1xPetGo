@@ -1,0 +1,341 @@
+local ScreenGas = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Tabs = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Esp = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Teleports = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local EspFrame = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local RelicsEsp = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local GiftEsp = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local TeleportFrame = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local GiftsTP = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local FruitTP = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+
+
+ScreenGas.Name = "ScreenGas"
+ScreenGas.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGas.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGas
+Frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.303442717, 0, 0.247363538, 0)
+Frame.Size = UDim2.new(0, 491, 0, 331)
+
+UICorner.Parent = Frame
+
+Tabs.Name = "Tabs"
+Tabs.Parent = Frame
+Tabs.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Tabs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tabs.BorderSizePixel = 0
+Tabs.Size = UDim2.new(0, 93, 0, 331)
+
+UICorner_2.Parent = Tabs
+
+Esp.Name = "Esp"
+Esp.Parent = Tabs
+Esp.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Esp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Esp.BorderSizePixel = 0
+Esp.Position = UDim2.new(0.0752688199, 0, 0.0392749235, 0)
+Esp.Size = UDim2.new(0, 79, 0, 64)
+Esp.Font = Enum.Font.FredokaOne
+Esp.Text = "ESP"
+Esp.TextColor3 = Color3.fromRGB(255, 255, 255)
+Esp.TextSize = 29.000
+Esp.TextWrapped = true
+
+UICorner_3.Parent = Esp
+
+Teleports.Name = "Teleports"
+Teleports.Parent = Tabs
+Teleports.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Teleports.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teleports.BorderSizePixel = 0
+Teleports.Position = UDim2.new(0.0752688199, 0, 0.265861034, 0)
+Teleports.Size = UDim2.new(0, 79, 0, 64)
+Teleports.Font = Enum.Font.FredokaOne
+Teleports.Text = "TP"
+Teleports.TextColor3 = Color3.fromRGB(255, 255, 255)
+Teleports.TextSize = 29.000
+Teleports.TextWrapped = true
+
+UICorner_4.Parent = Teleports
+
+EspFrame.Name = "EspFrame"
+EspFrame.Parent = Frame
+EspFrame.BackgroundColor3 = Color3.fromRGB(43, 44, 46)
+EspFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EspFrame.BorderSizePixel = 0
+EspFrame.Position = UDim2.new(0.189409375, 0, 0.151057407, 0)
+EspFrame.Size = UDim2.new(0, 398, 0, 281)
+EspFrame.Visible = false
+
+UICorner_5.Parent = EspFrame
+
+RelicsEsp.Name = "RelicsEsp"
+RelicsEsp.Parent = EspFrame
+RelicsEsp.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+RelicsEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RelicsEsp.BorderSizePixel = 0
+RelicsEsp.Position = UDim2.new(0.0543551818, 0, 0.0978378356, 0)
+RelicsEsp.Size = UDim2.new(0, 360, 0, 50)
+RelicsEsp.Font = Enum.Font.FredokaOne
+RelicsEsp.Text = "Relics Esp"
+RelicsEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
+RelicsEsp.TextSize = 26.000
+RelicsEsp.TextWrapped = true
+
+UICorner_6.Parent = RelicsEsp
+
+GiftEsp.Name = "GiftEsp"
+GiftEsp.Parent = EspFrame
+GiftEsp.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+GiftEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GiftEsp.BorderSizePixel = 0
+GiftEsp.Position = UDim2.new(0.0543551818, 0, 0.31491968, 0)
+GiftEsp.Size = UDim2.new(0, 360, 0, 50)
+GiftEsp.Font = Enum.Font.FredokaOne
+GiftEsp.Text = "Gift Esp"
+GiftEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
+GiftEsp.TextSize = 26.000
+GiftEsp.TextWrapped = true
+
+UICorner_7.Parent = GiftEsp
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.256619155, 0, 0.0151057402, 0)
+Title.Size = UDim2.new(0, 348, 0, 39)
+Title.Font = Enum.Font.FredokaOne
+Title.Text = "1x Pet Go"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.898167014, 0, 0, 0)
+Close.Size = UDim2.new(0, 50, 0, 50)
+Close.Font = Enum.Font.Unknown
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 41.000
+Close.TextWrapped = true
+
+TeleportFrame.Name = "TeleportFrame"
+TeleportFrame.Parent = Frame
+TeleportFrame.BackgroundColor3 = Color3.fromRGB(43, 44, 46)
+TeleportFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TeleportFrame.BorderSizePixel = 0
+TeleportFrame.Position = UDim2.new(0.189409375, 0, 0.151057407, 0)
+TeleportFrame.Size = UDim2.new(0, 398, 0, 281)
+TeleportFrame.Visible = false
+
+UICorner_8.Parent = TeleportFrame
+
+GiftsTP.Name = "GiftsTP"
+GiftsTP.Parent = TeleportFrame
+GiftsTP.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+GiftsTP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GiftsTP.BorderSizePixel = 0
+GiftsTP.Position = UDim2.new(0.0537873097, 0, 0.06892737, 0)
+GiftsTP.Size = UDim2.new(0, 139, 0, 50)
+GiftsTP.Font = Enum.Font.FredokaOne
+GiftsTP.Text = "All Gifts"
+GiftsTP.TextColor3 = Color3.fromRGB(255, 255, 255)
+GiftsTP.TextSize = 20.000
+
+UICorner_9.Parent = GiftsTP
+
+FruitTP.Name = "FruitTP"
+FruitTP.Parent = TeleportFrame
+FruitTP.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+FruitTP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FruitTP.BorderSizePixel = 0
+FruitTP.Position = UDim2.new(0.609063685, 0, 0.06892737, 0)
+FruitTP.Size = UDim2.new(0, 139, 0, 50)
+FruitTP.Font = Enum.Font.FredokaOne
+FruitTP.Text = "Every Fruit"
+FruitTP.TextColor3 = Color3.fromRGB(255, 255, 255)
+FruitTP.TextSize = 20.000
+
+UICorner_10.Parent = FruitTP
+
+
+local function SLETP_fake_script() -- Frame.SmoothDrag 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	local gui = script.Parent
+	local dragging = false
+	local dragInput, mousePos, framePos
+
+	local function update(input)
+		local delta = input.Position - mousePos
+		gui.Position = UDim2.new(
+			framePos.X.Scale,
+			framePos.X.Offset + delta.X,
+			framePos.Y.Scale,
+			framePos.Y.Offset + delta.Y
+		)
+	end
+
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			mousePos = input.Position
+			framePos = gui.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if dragging and input == dragInput then
+			update(input)
+		end
+	end)
+
+end
+coroutine.wrap(SLETP_fake_script)()
+
+local function highlightAllRelics()
+	for _, obj in pairs(workspace:GetDescendants()) do
+		if (obj:IsA("Part") or obj:IsA("MeshPart")) and obj.Name == "Relic" then
+			local highlight = Instance.new("Highlight")
+			highlight.Adornee = obj
+			highlight.FillColor = Color3.new(1, 1, 0)  -- Yellow
+			highlight.OutlineColor = Color3.new(1, 1, 1)  -- White
+			highlight.Parent = obj
+		end
+	end
+end
+RelicsEsp.MouseButton1Click:Connect(function()
+	highlightAllRelics()
+end)
+
+local function highlightObject(object)
+	if object:IsA("MeshPart") then
+		local highlight = Instance.new("Highlight")
+		highlight.Adornee = object
+		highlight.FillColor = Color3.new(1, 1, 0)  -- Yellow
+		highlight.OutlineColor = Color3.new(1, 1, 1)  -- White
+		highlight.Parent = object
+	end
+end
+
+local function highlightHiddenGifts()
+	local parentFolder = workspace:WaitForChild("__THINGS"):WaitForChild("HiddenGifts")
+
+	-- Highlight existing MeshParts
+	for _, obj in pairs(parentFolder:GetDescendants()) do
+		highlightObject(obj)
+	end
+
+	-- Listen for new MeshParts being added
+	parentFolder.DescendantAdded:Connect(function(obj)
+		highlightObject(obj)
+	end)
+end
+
+GiftEsp.MouseButton1Click:Connect(function()
+	highlightHiddenGifts()
+end)
+
+
+
+Close.MouseButton1Click:Connect(function()
+	ScreenGas:Destroy()
+end)
+
+-- Tabs
+
+Esp.MouseButton1Click:Connect(function()
+	EspFrame.Visible = true
+	TeleportFrame.Visible = false
+end)
+
+Teleports.MouseButton1Click:Connect(function()
+	EspFrame.Visible = false
+	TeleportFrame.Visible = true
+end)
+
+-- Gift TP
+
+local player = game.Players.LocalPlayer
+local hiddenGifts = workspace:WaitForChild("__THINGS"):WaitForChild("HiddenGifts"):GetDescendants()
+
+local function teleportToNextGift(index)
+	if index > #hiddenGifts then
+		print("All HiddenGifts visited.")
+		return
+	end
+
+	local currentGift = hiddenGifts[index]
+	if currentGift:IsA("MeshPart") then
+		player.Character:SetPrimaryPartCFrame(currentGift.CFrame)
+		wait(2)  -- wait for 2 seconds before teleporting to the next one
+	end
+
+	teleportToNextGift(index + 1)
+end
+
+GiftsTP.MouseButton1Click:Connect(function()
+teleportToNextGift(1)
+end)
+
+local player = game.Players.LocalPlayer
+local breakablesFolder = workspace:WaitForChild("__THINGS"):WaitForChild("Breakables")
+
+local function teleportTofruit()
+	for _, model in pairs(breakablesFolder:GetChildren()) do
+		if model:IsA("Model") then
+			for _, obj in pairs(model:GetDescendants()) do
+				if obj:IsA("MeshPart") and obj.Name == "base" then
+					player.Character:SetPrimaryPartCFrame(obj.CFrame)
+					wait(0.6)  -- wait for 2 seconds before teleporting to the next one
+				end
+			end
+		end
+	end
+	print("All relevant base parts visited.")
+end
+
+
+
+FruitTP.MouseButton1Click:Connect(function()
+	teleportTofruit()
+end)
