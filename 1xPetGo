@@ -305,9 +305,9 @@ local hiddenGifts = workspace:WaitForChild("__THINGS"):WaitForChild("HiddenGifts
 
 local function teleportToHiddenGifts()
 	for _, currentGift in pairs(hiddenGifts) do
-		if currentGift:IsA("MeshPart") and currentGift.Name == "HiddenGift" then
+		if currentGift:IsA("MeshPart") and currentGift.Name == "Model" then
 			player.Character:SetPrimaryPartCFrame(currentGift.CFrame)
-			wait(2)  -- wait for 2 seconds before teleporting to the next one
+			wait(0.6)  -- wait for 2 seconds before teleporting to the next one
 		end
 	end
 	print("All HiddenGifts visited.")
