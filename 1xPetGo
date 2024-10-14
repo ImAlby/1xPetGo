@@ -303,24 +303,18 @@ end)
 local player = game.Players.LocalPlayer
 local hiddenGifts = workspace:WaitForChild("__THINGS"):WaitForChild("HiddenGifts"):GetDescendants()
 
-local function teleportToGifts()
-	for _, model in pairs(hiddenGifts:GetChildren()) do
-		if model:IsA("Model") then
-			for _, obj in pairs(model:GetDescendants()) do
-				if obj:IsA("MeshPart") then
-					player.Character:SetPrimaryPartCFrame(obj.CFrame)
-					wait(0.6)  -- wait for 2 seconds before teleporting to the next one
-				end
-			end
+local function teleportToHiddenGifts()
+	for _, currentGift in pairs(hiddenGifts) do
+		if currentGift:IsA("MeshPart") and currentGift.Name == "HiddenGift" then
+			player.Character:SetPrimaryPartCFrame(currentGift.CFrame)
+			wait(2)  -- wait for 2 seconds before teleporting to the next one
 		end
 	end
-	print("All relevant base parts visited.")
+	print("All HiddenGifts visited.")
 end
 
-
-
 GiftsTP.MouseButton1Click:Connect(function()
-	teleportToGifts()
+teleportToHiddenGifts()
 end)
 
 
