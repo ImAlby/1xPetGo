@@ -301,25 +301,28 @@ end)
 -- Gift TP
 
 local player = game.Players.LocalPlayer
-local hiddenGifts = workspace:WaitForChild("__THINGS"):WaitForChild("HiddenGifts"):GetDescendants()
 
 local function teleportToHiddenGifts()
-	for _, model in pairs(hiddenGifts) do
-		if model:IsA("Model") then
-			for _, innerModel in pairs(model:GetDescendants()) do
-				if innerModel:IsA("Model") then
-					local hiddenGift = innerModel:FindFirstChild("HiddenGift")
-					if hiddenGift and hiddenGift:IsA("MeshPart") then
-						player.Character:SetPrimaryPartCFrame(hiddenGift.CFrame)
-						wait(2)  -- wait for 2 seconds before teleporting to the next one
-					end
-				end
-			end
+	local hiddenGifts = workspace:WaitForChild("__THINGS"):WaitForChild("HiddenGifts"):GetDescendants()
+
+	local hasMoreGifts = false
+
+	for _, obj in pairs(hiddenGifts) do
+		if obj:IsA("MeshPart") and obj.Name == "Model" then
+			player.Character:SetPrimaryPartCFrame(obj.CFrame)
+			-- Make the player jump
+			player.Character.Humanoid.Jump = true
+			wait(0.6)  -- wait for 2 seconds before teleporting to the next one
+			hasMoreGifts = true
 		end
 	end
-	print("All HiddenGifts visited.")
-end
 
+	if hasMoreGifts then
+		teleportToHiddenGifts()  -- repeat the process
+	else
+		print("All HiddenGifts visited.")
+	end
+end
 
 GiftsTP.MouseButton1Click:Connect(function()
 teleportToHiddenGifts()
@@ -342,7 +345,6 @@ local function teleportTofruit()
 	end
 	print("All relevant base parts visited.")
 end
-
 
 
 FruitTP.MouseButton1Click:Connect(function()
