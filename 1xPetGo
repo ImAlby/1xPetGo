@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGas = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -22,6 +27,7 @@ local UICorner_9 = Instance.new("UICorner")
 local FruitTP = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 
+--Properties:
 
 ScreenGas.Name = "ScreenGas"
 ScreenGas.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -82,7 +88,6 @@ EspFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 EspFrame.BorderSizePixel = 0
 EspFrame.Position = UDim2.new(0.189409375, 0, 0.151057407, 0)
 EspFrame.Size = UDim2.new(0, 398, 0, 281)
-EspFrame.Visible = false
 
 UICorner_5.Parent = EspFrame
 
@@ -152,7 +157,6 @@ TeleportFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TeleportFrame.BorderSizePixel = 0
 TeleportFrame.Position = UDim2.new(0.189409375, 0, 0.151057407, 0)
 TeleportFrame.Size = UDim2.new(0, 398, 0, 281)
-TeleportFrame.Visible = false
 
 UICorner_8.Parent = TeleportFrame
 
@@ -184,6 +188,7 @@ FruitTP.TextSize = 20.000
 
 UICorner_10.Parent = FruitTP
 
+-- Scripts:
 
 local function SLETP_fake_script() -- Frame.SmoothDrag 
 	local script = Instance.new('LocalScript', Frame)
@@ -298,24 +303,26 @@ end)
 local player = game.Players.LocalPlayer
 local hiddenGifts = workspace:WaitForChild("__THINGS"):WaitForChild("HiddenGifts"):GetDescendants()
 
-local function teleportToNextGift(index)
-	if index > #hiddenGifts then
-		print("All HiddenGifts visited.")
-		return
+local function teleportToGifts()
+	for _, model in pairs(hiddenGifts:GetChildren()) do
+		if model:IsA("Model") then
+			for _, obj in pairs(model:GetDescendants()) do
+				if obj:IsA("MeshPart") then
+					player.Character:SetPrimaryPartCFrame(obj.CFrame)
+					wait(0.6)  -- wait for 2 seconds before teleporting to the next one
+				end
+			end
+		end
 	end
-
-	local currentGift = hiddenGifts[index]
-	if currentGift:IsA("MeshPart") then
-		player.Character:SetPrimaryPartCFrame(currentGift.CFrame)
-		wait(2)  -- wait for 2 seconds before teleporting to the next one
-	end
-
-	teleportToNextGift(index + 1)
+	print("All relevant base parts visited.")
 end
 
+
+
 GiftsTP.MouseButton1Click:Connect(function()
-teleportToNextGift(1)
+	teleportToGifts()
 end)
+
 
 local player = game.Players.LocalPlayer
 local breakablesFolder = workspace:WaitForChild("__THINGS"):WaitForChild("Breakables")
